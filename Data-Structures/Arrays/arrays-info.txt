@@ -1,0 +1,4 @@
+Arrays are one of the most basic forms of data structures. They contain elements.
+
+Python:
+  Python does not have traditional arrays.

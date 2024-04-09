@@ -1,0 +1,32 @@
+Linked Lists consists of Nodes that are connected together. It is a form of struct where you could directly
+  find Nodes adjacent to the one you are viewing.
+
+There are two types of linked lists:
+
+Singly Linked Lists:
+  Nodes consists of two attributes: `data` and `next`.
+    `data` refers to the element stored inside the node.
+    `next` refers to the node that comes after the current node.
+  Singly Linked Lists consists of one attribute: `head`.
+    `head` refers to the first Node stored inside the linked list.
+
+  Pros:
+    - Simple to implement.
+  Cons:
+    - When accessing or updating the end of the list, you must traverse through every node in the list.
+      This causes a worst case scenario of O(n).
+
+Doubly Linked Lists:
+  Nodes consists of three attributes: `data`, `next`, and `prev`.
+    `data` refers to the element stored inside the node.
+    `next` refers to the node that comes after the current node.
+    `prev` refers to the node that comes before the current node.
+  Doubly Linked Lists consists of two attributes: `head` and `tail`.
+    `head` refers to the first Node stored inside the linked list.
+    `tail` refers to the last Node stored inside the linked list.
+      - Generally, `head.prev` is the `tail`, and `tail.next` is the `head.
+    
+  Pros:
+    - When accessing the end of the list, you can directly access it through the `tail`.
+      This will always be a case scenario of O(1), which is significantly better than the Singly Linked List.
+  
