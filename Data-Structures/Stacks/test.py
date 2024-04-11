@@ -5,6 +5,8 @@ def main():
   for i in range(20):
     stack.push(i)
   
+  stack.display()
+  
   for i in range(3):
     stack.pop()
 
