@@ -35,13 +35,13 @@ class SinglyLinkedList:
   def insertAtIndex(self, data, index):
     new_node = Node(data)
     current_node = self.head
-    position = 0
-    if position == index:
+    current_index = 0
+    if current_index == index:
       self.insertAtHead(data)
       return
     
-    while(current_node is not None and position + 1 != index):
-      position += 1
+    while(current_node is not None and current_index + 1 != index):
+      current_index += 1
       current_node = current_node.next
 
     if current_node is not None:
@@ -50,6 +50,24 @@ class SinglyLinkedList:
 
     else:
       print("Index out of range.")
+
+  def deleteAtIndex(self, index):
+    current_node = self.head
+    prev_node = None
+    current_index = 0
+
+    while current_node is not None and current_index != index:
+      prev_node = current_node
+      current_node = current_node.next
+      current_index += 1
+    
+    if current_node is not None:
+      prev_node.next = current_node.next
+      current_node = None
+
+    else:
+      print("Index is out of range.")
+
 
   # ALWAYS CASE O(1)
   def getHead(self):
@@ -73,9 +91,10 @@ class SinglyLinkedList:
   # ALWAYS CASE O(n)
   def printNodes(self):
     current_node = self.head
-    while current_node is not None:
-      print(current_node.data, end=" ")
+    while current_node:
+      print(current_node.data, end=" -> ")
       current_node = current_node.next
+    print("None")
 
 
 

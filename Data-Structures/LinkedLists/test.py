@@ -7,8 +7,8 @@ def testSinglyLinkedList():
   for i in range(0, 25):
     list.insertAtTail(i)
   list.insertAtIndex("INSERT", 6)
+  list.deleteAtIndex(8)
   list.printNodes()
-  print()
   print(f"Head: {list.getHead()}, Tail: {list.getTail()}.")
 
 def testDoublyLinkedList():
@@ -17,13 +17,15 @@ def testDoublyLinkedList():
   for i in range(0, 25):
     list.insertAtTail(i)
   list.insertAtIndex("INSERT", 6)
+  list.deleteAtIndex(8)
   list.printNodes()
-  print()
   print(f"Head: {list.getHead()}, Tail: {list.getTail()}.")
 
 def main():
   print("--- TESTING LINKED LISTS ---")
   testSinglyLinkedList()
+  print()
+
   testDoublyLinkedList()
   print()
 

@@ -59,6 +59,24 @@ class DoublyLinkedList:
     else:
       print("Index out of range.")
 
+  def deleteAtIndex(self, index):
+    current_node = self.head
+    prev_node = None
+    current_index = 0
+
+    while (current_node is not None and current_index is not index):
+      current_index += 1
+      prev_node = current_node
+      current_node = current_node.next
+
+    if current_node is not None:
+      prev_node.next = current_node.next
+      current_node.next.prev = prev_node
+      current_node = None
+
+    else:
+      print("Index out of range.")
+
   def getHead(self):
     if self.head is not None:
       return self.head.data
@@ -76,10 +94,11 @@ class DoublyLinkedList:
   def printNodes(self):
     current_node = self.head
     while (True):
-      print(current_node.data, end=" ")
+      print(current_node.data, end=" -> ")
       current_node = current_node.next
       if current_node is self.head:
         break
+    print("End")
 
     
 
