@@ -11,12 +11,12 @@ class Stack:
   def pop(self):
     if (self.items):
       return self.items.pop()
-    print("Stack is empty.")
+    return "Stack is empty."
 
   def peek(self):
     if (self.items):
       return self.items[-1]
-    print("Stack is empty.")
+    return "Stack is empty."
 
   def display(self):
     print(self.items)
