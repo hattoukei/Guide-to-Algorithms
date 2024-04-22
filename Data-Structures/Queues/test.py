@@ -1,18 +1,21 @@
 from queue import Queue
+from SLLQueue import SLLQueue
 
 def main():
-  queue = Queue()
+  queue = SLLQueue()
   for i in range(20):
-    queue.push(i)
+    queue.enqueue(i)
 
-  queue.display()
+  print(queue)
   
   for i in range(3):
-    queue.pop()
+    queue.dequeue()
 
-  queue.display()
+  print(queue)
 
-  for i in range(20):
-    queue.pop()
+  for i in range(15):
+    queue.dequeue()
+
+  print(queue)
 
 main()
