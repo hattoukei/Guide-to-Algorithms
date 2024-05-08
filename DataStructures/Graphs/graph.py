@@ -7,4 +7,4 @@ class Graph:
     self.graph = graph
 
   def add_node(self, data):
-    graph.
+    pass
